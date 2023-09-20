@@ -1,1 +1,1 @@
-﻿dotnet ef migrations remove --configuration Release --context PortalDataContext --project "./EE.Infrastructure.csproj" --startup-project "../EE.API/EE.API.csproj"
+﻿dotnet ef migrations remove --configuration Release --context PortalDataContext --project "./SchoolSystem1.Infrastructure.csproj" --startup-project "../SchoolSystem1/SchoolSystem1.csproj"
