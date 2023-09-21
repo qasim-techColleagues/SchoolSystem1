@@ -1,0 +1,36 @@
+﻿<Page x:Class="SchoolSystem1.FeesManagement.FeeList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchoolSystem1.FeesManagement"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FeeList">
+
+    <Grid Background="Wheat">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label HorizontalContentAlignment="Center" FontWeight="ExtraBold" FontSize="25">Fee Management</Label>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <StackPanel>
+                        <Button Height="38" x:Name="addfee" Click="addfee_Click">ADD FEE</Button>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <DataGrid x:Name="dgfeelist" ItemsSource="{Binding Fees}"  IsReadOnly="True" MouseDoubleClick="dgfeelist_MouseDoubleClick"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
