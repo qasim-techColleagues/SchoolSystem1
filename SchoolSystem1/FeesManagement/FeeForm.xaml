@@ -145,7 +145,7 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1">
-                    <Button x:Name="btn_feesubmit" Click="btn_feesubmit_Click" FontSize="15" Width="130" Height="23">Submit</Button>
+                    <Button x:Name="btn_feesubmit" Click="btn_feesubmit_Click" FontSize="15" Width="120" Height="23">Submit</Button>
                 </Grid>
             </Grid>
         </Grid>
