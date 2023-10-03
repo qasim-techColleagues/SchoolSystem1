@@ -16,7 +16,7 @@ namespace SchoolSystem1.StudentManagement
             _fatherName = fatherName;
             _studentId = StudentIdCounter++;
         }
-
+        public Student() { }
         public int StudentId
         {
             get => _studentId;

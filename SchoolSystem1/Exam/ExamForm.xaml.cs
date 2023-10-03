@@ -48,14 +48,14 @@ namespace SchoolSystem1.Exam
                     Exam.TotalNumber = Exam.InformationTechnology + Exam.Science + Exam.Biology + Exam.Physics + Exam.Chemistry + Exam.Arithmetic;
                 }
 
-                else 
+                else
                 {
                     //add
                     Exam.StudentId = SelectedStudent.StudentId;
                     Exam.StudentName = SelectedStudent.StudentName;
                     ExamList.Exams.Add(Exam);
-                } 
-                
+                }
+
             }
         }
         private void btnAddMarks_Click(object sender, RoutedEventArgs e)
@@ -71,7 +71,7 @@ namespace SchoolSystem1.Exam
                 Exam.StudentName = SelectedStudent.StudentName;
                 ExamList.Exams.Add(Exam);
             }
-            else 
+            else
             {
                 //update
                 exam.InformationTechnology = Exam.InformationTechnology;
@@ -82,14 +82,8 @@ namespace SchoolSystem1.Exam
                 exam.Arithmetic = Exam.Arithmetic;
                 Exam.TotalNumber = exam.InformationTechnology + exam.Science + exam.Biology + exam.Physics + exam.Chemistry + exam.Arithmetic;
             }
-        
-
 
             this.Close();
-
         }
-
-
-
     }
 }

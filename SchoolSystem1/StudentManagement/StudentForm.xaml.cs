@@ -24,7 +24,8 @@ namespace SchoolSystem1.StudentManagement
         public StudentForm()
         {
             InitializeComponent();
-            DataContext = this;           
+            DataContext = this;
+            Student = new Student();
         }
 
         public Student Student
@@ -42,7 +43,7 @@ namespace SchoolSystem1.StudentManagement
             {
                 var student = new Student(Student.StudentName, Student.FatherName);
 
-                StudentList.Students.Add(student);
+                StudentList.Students.Add(Student);
 
                 MessageBox.Show("Student added");
                 this.Close();                
