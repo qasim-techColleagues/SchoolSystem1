@@ -1,4 +1,5 @@
 ﻿using SchoolSystem1.Exam;
+using SchoolSystem1.FeesManagement;
 using SchoolSystem1.StudentManagement;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,7 @@ namespace SchoolSystem1
 
         private void btnFeeMenu_Click(object sender, RoutedEventArgs e)
         {
+            mainFrame.Content = new FeeList();
 
         }
 
