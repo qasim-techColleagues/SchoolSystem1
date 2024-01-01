@@ -43,7 +43,7 @@ namespace SchoolSystem1.StudentManagement
             {
                 var student = new Student(Student.StudentName, Student.FatherName);
 
-                StudentList.Students.Add(Student);
+                StudentList.Students.Add(student);
 
                 MessageBox.Show("Student added");
                 this.Close();                
