@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="38*"/>
+            <ColumnDefinition Width="763*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
             <RowDefinition Height="*"/>
@@ -14,31 +18,31 @@
         </Grid.RowDefinitions>
         <Grid x:Name="Header"
               Grid.Row="0"
-              Background="Black" >
+              Background="Black" Grid.ColumnSpan="2" >
             <StackPanel Orientation="Vertical">
-                <Label Content="School Management Software" FontSize="30" Foreground="White" Width="788" HorizontalContentAlignment="Center" />
+                <Label Content="School Management Software" FontSize="40" Foreground="White" Width="788" HorizontalContentAlignment="Center"   />
             </StackPanel>
         </Grid>
         <Grid x:Name="Mid"
-              Grid.Row="1">
+              Grid.Row="1" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.2*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid x:Name="MainMenu"
                 Grid.Row="0"
-                Background="LightGray">
+                Background="Black">
                 <StackPanel>
                     <Button Height="50" Content="Student" Name="btnStudentMenu" Click="btnStudentMenu_Click"/>
                     <Button Height="50" Content="Fee" Name="btnFeeMenu" Click="btnFeeMenu_Click"/>
-                    <Button Height="50" Content="Exam" Name="btnExamMenu" Click="btnExamMenu_Click"/>                    
+                    <Button Height="50" Content="Exam" Name="btnExamMenu" Click="btnExamMenu_Click"/>
                 </StackPanel>
             </Grid>
-            <Grid Grid.Column="1" Background="Red">
+            <Grid Grid.Column="1" Background="Black">
                 <Frame x:Name="mainFrame"/>
             </Grid>
-               
+
         </Grid>
-        
+
     </Grid>
 </Window>
