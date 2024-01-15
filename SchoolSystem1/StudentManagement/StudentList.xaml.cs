@@ -16,7 +16,6 @@ namespace SchoolSystem1.StudentManagement
         {
             InitializeComponent();
             DataContext = this;
-            AddDummyData();
 
         }
         public static ObservableCollection<Student> Students { get; set; }
@@ -27,10 +26,5 @@ namespace SchoolSystem1.StudentManagement
             studentForm.ShowDialog();
         }
 
-        private void AddDummyData()
-        {
-            Students.Add(new Student("Qasim", "Saleem"));
-            Students.Add(new Student("Qasim1", "Saleem"));
-        }
     }
 }

@@ -15,26 +15,41 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Label HorizontalContentAlignment="Center"
-                       FontWeight="ExtraBold"
+                       Height="70"
+                       FontWeight="Regular"
                        Foreground="White"
                        FontSize="20">Fee Management</Label>
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.15*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.10*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
                     <StackPanel Background="Gray" Orientation="Vertical" >
-                        <Button Height="38"
+                        <Button Height="70"
                                 x:Name="addfee"
-                                Click="addfee_Click">Add Fee</Button>
-                        <Button Height="38"
+                                Click="addfee_Click">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="C:\Users\Qasim\OneDrive\Pictures\add-money.png"
+                                       Width="100"
+                                       Height="50"/>
+                                <TextBlock Text="Add Fee" 
+                                           FontSize="10" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Height="70"
                                 x:Name="Delete"
-                                Click="addfee_Click">Delete</Button>
-                        <Button Height="38"
-                                x:Name="Print"
-                                Click="addfee_Click">Print</Button>
+                                Click="Deletefee_Click">
+                            <StackPanel Orientation="Vertical">
+                                <Image Source="C:\Users\Qasim\OneDrive\Pictures\delete.png"
+                                       Width="100"
+                                       Height="50" />
+                                <TextBlock Text="Delete"
+                                           FontSize="10"
+                                           HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Column="1">

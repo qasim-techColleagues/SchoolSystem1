@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace SchoolSystem1.Exam
 {
@@ -12,7 +13,6 @@ namespace SchoolSystem1.Exam
     {
         private Exam _exam;
         private Student _student;
-
         public ExamForm()
         {
             InitializeComponent();
@@ -36,16 +36,19 @@ namespace SchoolSystem1.Exam
 
                 if (value != null)
                 {
-                    var exam = ExamList.Exams.Where(x => x.StudentId == value.StudentId).FirstOrDefault();
+                    var exam = ExamList.Exams.FirstOrDefault(x => x.StudentId == value.StudentId);
+
                     if (exam != null)
+                    {
                         Exam.StudentName = exam.StudentName;
-                    Exam.InformationTechnology = exam.InformationTechnology;
-                    Exam.Science = exam.Science;
-                    Exam.Biology = exam.Biology;
-                    Exam.Physics = exam.Physics;
-                    Exam.Chemistry = exam.Chemistry;
-                    Exam.Arithmetic = exam.Arithmetic;
-                    Exam.TotalNumber = Exam.InformationTechnology + Exam.Science + Exam.Biology + Exam.Physics + Exam.Chemistry + Exam.Arithmetic;
+                        Exam.InformationTechnology = exam.InformationTechnology;
+                        Exam.Science = exam.Science;
+                        Exam.Biology = exam.Biology;
+                        Exam.Physics = exam.Physics;
+                        Exam.Chemistry = exam.Chemistry;
+                        Exam.Arithmetic = exam.Arithmetic;
+                        Exam.TotalNumber = Exam.InformationTechnology + Exam.Science + Exam.Biology + Exam.Physics + Exam.Chemistry + Exam.Arithmetic;
+                    }
                 }
 
                 else
@@ -84,6 +87,24 @@ namespace SchoolSystem1.Exam
             }
 
             this.Close();
+        }
+
+        private void txtSubject1_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+
+            if (!int.TryParse(textBox.Text, out int result))
+            {
+                
+                e.Handled = true;
+            }
+            else
+            {
+                if (result > 100)
+                {
+                    e.Handled = true;
+                }
+            }
         }
     }
 }

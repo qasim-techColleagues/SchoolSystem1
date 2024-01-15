@@ -26,17 +26,46 @@
         <Grid x:Name="Mid"
               Grid.Row="1" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="0.1*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid x:Name="MainMenu"
                 Grid.Row="0"
                 Background="Black">
                 <StackPanel>
-                    <Button Height="50" Content="Student" Name="btnStudentMenu" Click="btnStudentMenu_Click"/>
-                    <Button Height="50" Content="Fee" Name="btnFeeMenu" Click="btnFeeMenu_Click"/>
-                    <Button Height="50" Content="Exam" Name="btnExamMenu" Click="btnExamMenu_Click"/>
-                </StackPanel>
+                    
+                            <Button Height="70" Name="btnStudentMenu" Click="btnStudentMenu_Click">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="C:\Users\Qasim\OneDrive\Pictures\graduated.png"
+                                   Width="100"
+                                   Height="50" />
+                            <TextBlock Text="Student"
+                                       FontSize="10"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button>   
+                    <Button Height="70" Name="btnFeeMenu" Click="btnFeeMenu_Click">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="C:\Users\Qasim\OneDrive\Pictures\Fee.png"
+                                   Width="100"
+                                   Height="50" />
+                            <TextBlock Text="Fee"
+                                       FontSize="10"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <Button Height="70"
+                            Name="btnExamMenu"
+                            Click="btnExamMenu_Click">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="C:\Users\Qasim\OneDrive\Pictures\Exam.png"
+                                   Width="100"
+                                   Height="50" />
+                            <TextBlock Text="Exam"
+                                       FontSize="10"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button></StackPanel>
             </Grid>
             <Grid Grid.Column="1" Background="Black">
                 <Frame x:Name="mainFrame"/>

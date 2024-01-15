@@ -1,4 +1,5 @@
-﻿using SchoolSystem1.StudentManagement;
+﻿using SchoolSystem1.Exam;
+using SchoolSystem1.StudentManagement;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -51,6 +52,20 @@ namespace SchoolSystem1.FeesManagement
                 feeSystem.ShowDialog();
             }
 
+        }
+
+        private void Deletefee_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgfeelist.SelectedItem != null)
+            {
+                Fee selectedExam = dgfeelist.SelectedItem as Fee;
+                MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this Fee?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    Fees.Remove(selectedExam);
+                }
+            }
         }
     }
 }
