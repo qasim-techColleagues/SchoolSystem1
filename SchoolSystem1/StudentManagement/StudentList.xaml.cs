@@ -25,6 +25,11 @@ namespace SchoolSystem1.StudentManagement
             var studentForm = new StudentForm();
             studentForm.ShowDialog();
         }
+        private void btnDeleteStudent_Click(object sender, RoutedEventArgs e)
+        {
+            var studentForm = new StudentForm();
+            studentForm.ShowDialog();
+        }
 
     }
 }

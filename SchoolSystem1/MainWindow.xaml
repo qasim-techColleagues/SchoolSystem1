@@ -68,7 +68,8 @@
                     </Button></StackPanel>
             </Grid>
             <Grid Grid.Column="1" Background="Black">
-                <Frame x:Name="mainFrame"/>
+                <Frame x:Name="mainFrame"
+                        />
             </Grid>
 
         </Grid>

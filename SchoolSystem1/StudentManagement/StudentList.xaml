@@ -10,7 +10,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid x:Name="Header"
@@ -21,7 +21,32 @@
             </StackPanel>
         </Grid>
         <Grid x:Name="Menu" Grid.Row="1" Background="Gray">
-            <Button Height="40" Width="100" Content="Add Student" Name="btnStudenAdd" Click="btnStudenAdd_Click" HorizontalAlignment="Right"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Height="70"
+                        Name="btnStudenAdd"
+                        Click="btnStudenAdd_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="C:\Users\Qasim\OneDrive\Pictures\student.png"
+                               Width="100"
+                               Height="50" />
+                        <TextBlock Text="Add Student"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button Height="70"
+                        Name="btnDelete"
+                        Click="btnDeleteStudent_Click">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="C:\Users\Qasim\OneDrive\Pictures\delete.png"
+                               Width="100"
+                               Height="50" />
+                        <TextBlock Text="Delete Student"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
         </Grid>
         <Grid Grid.Row="2">
             <DataGrid x:Name="dgStudents" ItemsSource="{Binding Students}" Background="LightGray"/>
