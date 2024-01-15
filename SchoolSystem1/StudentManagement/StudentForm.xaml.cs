@@ -1,22 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SchoolSystem1.StudentManagement
 {
-    /// <summary>
-    /// Interaction logic for StudentForm.xaml
-    /// </summary>
+    // ... (other using statements)
+
     public partial class StudentForm : Window
     {
         private Student _student;
@@ -31,22 +19,31 @@ namespace SchoolSystem1.StudentManagement
         public Student Student
         {
             get => _student;
-            set
-            {
-                _student = value;
-            }
+            set => _student = value;
         }
-      
+
         private void StudentAdd_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(Student.StudentName) && !string.IsNullOrEmpty(Student.FatherName))
             {
-                var student = new Student(Student.StudentName, Student.FatherName);
+                var existingStudent = StudentList.Students.FirstOrDefault(s => s.StudentId == Student.StudentId);
 
-                StudentList.Students.Add(student);
+                if (existingStudent != null)
+                {
+                    // Update existing student's name and father's name
+                    existingStudent.StudentName = Student.StudentName;
+                    existingStudent.FatherName = Student.FatherName;
+                    MessageBox.Show("Student information updated");
+                }
+                else
+                {
+                    // Add a new student if the ID is not found
+                    var newStudent = new Student(Student.StudentName, Student.FatherName);
+                    StudentList.Students.Add(newStudent);
+                    MessageBox.Show("New student added");
+                }
 
-                MessageBox.Show("Student added");
-                this.Close();                
+                this.Close();
             }
             else
             {

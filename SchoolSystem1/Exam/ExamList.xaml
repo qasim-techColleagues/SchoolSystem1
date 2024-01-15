@@ -11,7 +11,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="70" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid x:Name="Header"
@@ -29,19 +29,34 @@
               Grid.Row="1"
               Background="Gray">
             <StackPanel Orientation="Horizontal">
-            <Button Height="40"
-                    Width="150"
-                    Content="Add Marks"
+            <Button Height="70"
                     Name="btnExamAdd"
                     Click="btnExamAdd_Click"
-                    />
+                    >
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="C:\Users\Qasim\OneDrive\Pictures\Plus.png"
+                               Width="100"
+                               Height="50" />
+                        <TextBlock Text="Add Marks"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
             
                      
-            <Button Content="Delete"
+            <Button 
                     HorizontalAlignment="Left"
                     Click="btnDeleteExam_Click"
-                        Height="40"
-                        Width="150" />
+                        Height="70">
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="C:\Users\Qasim\OneDrive\Pictures\delete.png"
+                               Width="100"
+                               Height="50" />
+                        <TextBlock Text="Delete"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center" />
+                    </StackPanel>
+                </Button>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="2">

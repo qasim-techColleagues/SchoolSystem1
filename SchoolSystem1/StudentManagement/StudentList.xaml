@@ -49,7 +49,11 @@
             </StackPanel>
         </Grid>
         <Grid Grid.Row="2">
-            <DataGrid x:Name="dgStudents" ItemsSource="{Binding Students}" Background="LightGray"/>
+            <DataGrid x:Name="dgStudents"
+                      ItemsSource="{Binding Students}"
+                      Background="LightGray"
+                      IsReadOnly="True"
+                      MouseDoubleClick="dgStudents_MouseDoubleClick" />
 
         </Grid>
     </Grid>
